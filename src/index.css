@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap");
+
+:root {
+  --almost-white: hsl(0, 0%, 98%);
+  --medium-gray: hsl(0, 0%, 41%);
+  --almost-black: hsl(0, 0%, 8%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  padding: 4rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  color: var(--medium-gray);
+}
+
+nav > .left {
+  display: flex;
+  width: 50%;
+  padding-left: 4rem;
+}
+
+nav > .left > ul {
+  display: flex;
+  list-style-type: none;
+  justify-content: space-between;
+  font-size: 1.4rem;
+  padding-left: 4rem;
+  width: 50%;
+  cursor: pointer;
+}
+
+nav > .left > ul > li:hover {
+  color: var(--almost-black);
+}
+
+nav > .right {
+  width: 20%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.login {
+  cursor: pointer;
+  border: none;
+  background-color: #fff;
+  margin-right: 2rem;
+  color: var(--medium-gray);
+}
+
+.login:hover {
+  color: var(--almost-black);
+}
+
+.register {
+  width: 10.4rem;
+  height: 4.2rem;
+  border-radius: 1rem;
+  background-color: #fff;
+  border: 1px solid var(--medium-gray);
+  cursor: pointer;
+  color: var(--medium-gray);
+}
+
+.register:hover {
+  color: var(--almost-black);
+  border: 1px solid var(--almost-black);
+}
+
+main {
+  display: flex;
+  max-height: 100vh;
+  padding-left: 4rem;
+}
+
+main > .left {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  padding-left: 2rem;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 8rem;
+  width: 70%;
+}
+
+p {
+  font-size: 1.8rem;
+  color: var(--medium-gray);
+  width: 60%;
+  padding-top: 2rem;
+}
+
+.learn {
+  width: 16.3rem;
+  height: 5.8rem;
+  border-radius: 1rem;
+  background-color: var(--almost-black);
+  color: var(--almost-white);
+  font-size: 1.8rem;
+  cursor: pointer;
+  border: none;
+  margin-top: 2rem;
+}
+
+.learn:hover {
+  background-color: #fff;
+  color: var(--almost-black);
+  border: 1px solid var(--almost-black);
+}
+
+.logos {
+  display: flex;
+  margin-top: 8rem;
+  height: 3rem;
+}
+
+.logos > img {
+  padding-right: 4rem;
+  max-height: 100%;
+}
+
+main > .right {
+  width: 50%;
+}
+
+.right > img {
+  max-width: 100%;
+  height: 100%;
+}
