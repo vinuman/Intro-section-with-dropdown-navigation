@@ -3,6 +3,7 @@ import icon2 from "./client-audiophile.svg";
 import icon3 from "./client-meet.svg";
 import icon4 from "./client-maker.svg";
 import mainImage from "./image-hero-desktop.png";
+import mobImage from "./image-hero-mobile.png";
 
 const Main = () => {
   return (
@@ -22,7 +23,8 @@ const Main = () => {
         </div>
       </div>
       <div className="right">
-        <img src={mainImage}></img>
+        <img className="deskTopImage" src={mainImage}></img>
+        <img className="mobImage" src={mobImage}></img>
       </div>
     </main>
   );

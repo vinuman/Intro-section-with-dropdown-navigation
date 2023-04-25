@@ -79,6 +79,20 @@ nav > .right {
   border: 1px solid var(--almost-black);
 }
 
+.hamburger {
+  display: none;
+}
+
+.line {
+  width: 3.2rem;
+  height: 0.2rem;
+  background-color: var(--almost-black);
+  margin: 0.5rem;
+}
+
+.nav-end {
+  cursor: pointer;
+}
 main {
   display: flex;
   max-height: 100vh;
@@ -103,6 +117,7 @@ p {
   color: var(--medium-gray);
   width: 60%;
   padding-top: 2rem;
+  font-weight: bolder;
 }
 
 .learn {
@@ -138,7 +153,100 @@ main > .right {
   width: 50%;
 }
 
-.right > img {
+.right > .deskTopImage {
   max-width: 100%;
   height: 100%;
+}
+
+.mobImage {
+  display: none;
+}
+
+@media screen and (max-width: 700px) {
+  body {
+    padding: 0;
+  }
+  nav > .left {
+    display: none;
+  }
+  nav > .right {
+    display: none;
+  }
+  .hamburger {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    padding-top: 2rem;
+    border: 1px solid red;
+    margin: 0 auto;
+  }
+
+  .line {
+    width: 3.2rem;
+    height: 0.2rem;
+    background-color: var(--almost-black);
+    margin: 0.5rem;
+  }
+  main {
+    display: flex;
+    flex-direction: column-reverse;
+    height: auto;
+    border: 1px solid red;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  main > .left {
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 3.6rem;
+    width: 100%;
+  }
+
+  p {
+    font-size: 1.6rem;
+    width: 100%;
+    padding-top: 2rem;
+  }
+
+  .learn {
+    width: 13.6rem;
+    height: 4.8rem;
+  }
+
+  .learn:hover {
+    background-color: #fff;
+    color: var(--almost-black);
+    border: 1px solid var(--almost-black);
+  }
+  .logos {
+    display: flex;
+    margin-top: 4rem;
+    height: 3rem;
+    width: 100%;
+  }
+
+  .logos > img {
+    padding-right: 4rem;
+    max-height: 120%;
+    width: 30%;
+  }
+
+  main > .right {
+    width: 100%;
+    margin-top: 0rem;
+    margin-left: 0;
+    border: 1px solid red;
+  }
+
+  .right > .deskTopImage {
+    display: none;
+  }
+
+  .mobImage {
+    display: block;
+    width: 100%;
+  }
 }
