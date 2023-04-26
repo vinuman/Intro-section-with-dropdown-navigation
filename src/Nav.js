@@ -1,10 +1,11 @@
-import logo from "./logo.svg";
 import arrowDown from "./icon-arrow-down.svg";
+import logo from "./logo.svg";
 import arrowUp from "./icon-arrow-up.svg";
 import todo from "./icon-todo.svg";
 import calendar from "./icon-calendar.svg";
 import reminders from "./icon-reminders.svg";
 import planning from "./icon-planning.svg";
+import Hamburger from "./Hamburger";
 import { useState } from "react";
 
 const Nav = () => {
@@ -14,6 +15,10 @@ const Nav = () => {
   const handleFeaturesClick = () => {
     setFeatures(!features);
     console.log(features);
+  };
+
+  const handleHamburger = () => {
+    setCompany(!company);
   };
 
   const style = {
@@ -37,7 +42,21 @@ const Nav = () => {
     left: "10%",
     top: "10%",
     border: "1px solid #151515",
-    paddingBottom: "1rem",
+    paddingBottom: "2rem",
+  };
+  const styleFeature1 = {
+    width: "11.6rem",
+    backgroundColor: "#fff",
+    borderRadius: "2rem",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    position: "absolute",
+    left: "21%",
+    top: "10%",
+    border: "1px solid #151515",
+    paddingBottom: "2rem",
   };
 
   const styleFeatureList = {
@@ -57,6 +76,10 @@ const Nav = () => {
     fontSize: "1.4rem",
     height: "100%",
     paddingLeft: "1rem",
+  };
+
+  const styleList2 = {
+    left: "30% !important",
   };
 
   return (
@@ -95,11 +118,31 @@ const Nav = () => {
               <img style={style2} src={arrowDown}></img>
             </li>
           )}
+          {company ? (
+            <div>
+              <li onClick={handleHamburger}>
+                Company
+                <img style={style2} src={arrowUp}></img>
+              </li>
+              <div style={styleFeature1} className="featureList">
+                <div style={styleFeatureList} className="feature-item">
+                  <p style={styleList}>History</p>
+                </div>
+                <div style={styleFeatureList} className="feature-item">
+                  <p style={styleList}>Our team</p>
+                </div>
+                <div style={styleFeatureList} className="feature-item">
+                  <p style={styleList}>Blog</p>
+                </div>
+              </div>
+            </div>
+          ) : (
+            <li onClick={handleHamburger}>
+              Company
+              <img style={style2} src={arrowDown}></img>
+            </li>
+          )}
 
-          <li>
-            Company
-            <img style={style2} src={arrowDown}></img>
-          </li>
           <li>Careers</li>
           <li>About</li>
         </ul>
@@ -108,16 +151,7 @@ const Nav = () => {
         <button className="login">Login</button>
         <button className="register">Register</button>
       </div>
-      <div className="hamburger">
-        <div className="nav-start">
-          <img style={style} src={logo}></img>
-        </div>
-        <div className="nav-end">
-          <div className="line"></div>
-          <div className="line"></div>
-          <div className="line"></div>
-        </div>
-      </div>
+      <Hamburger />
     </nav>
   );
 };

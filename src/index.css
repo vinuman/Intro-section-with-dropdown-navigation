@@ -140,6 +140,7 @@ p {
 
 .logos {
   display: flex;
+  justify-content: space-evenly;
   margin-top: 8rem;
   height: 3rem;
 }
@@ -147,6 +148,7 @@ p {
 .logos > img {
   padding-right: 4rem;
   max-height: 100%;
+  width: 12rem;
 }
 
 main > .right {
