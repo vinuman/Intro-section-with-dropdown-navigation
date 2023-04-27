@@ -7,57 +7,6 @@ import planning from "./icon-planning.svg";
 import { useState, useEffect } from "react";
 import arrowDown from "./icon-arrow-down.svg";
 
-const style = {
-  height: "2.6rem",
-  width: "8.3rem",
-};
-const style2 = {
-  paddingLeft: "0.6rem",
-};
-
-const styleFeature = {
-  display: "flex",
-  flexDirection: "column",
-  justifyContent: "center",
-  alignItems: "center",
-  border: "1px solid red",
-  width: "100%",
-  marginTop: "1rem",
-};
-const styleFeature1 = {
-  width: "11.6rem",
-  backgroundColor: "#fff",
-  borderRadius: "2rem",
-  display: "flex",
-  flexDirection: "column",
-  justifyContent: "center",
-  alignItems: "center",
-  position: "absolute",
-  left: "21%",
-  top: "10%",
-  border: "1px solid #151515",
-  paddingBottom: "2rem",
-};
-
-const styleFeatureList = {
-  display: "flex",
-  justifyContent: "center",
-  width: "100%",
-};
-
-const styleIcon = {
-  width: "1.6rem",
-  height: "1.6rem",
-  marginTop: "1.8rem",
-};
-
-const styleList = {
-  color: "#686868",
-  fontSize: "1.4rem",
-  height: "100%",
-  paddingLeft: "1rem",
-};
-
 const Hamburger = () => {
   const [menu, setMenu] = useState(false);
   const [bgColor, setBgColor] = useState("white");
@@ -86,10 +35,29 @@ const Hamburger = () => {
     document.body.className = `bg-${bgColor}`;
   }, [bgColor]);
 
+  const featureListStyle = {
+    width: "150%",
+    marginTop: "2rem",
+
+    marginLeft: "3rem",
+  };
+
+  const imgStyle = {
+    marginTop: "1rem",
+    marginLeft: "2rem",
+    width: "3rem",
+  };
+
+  const listStyle = {
+    width: "40%",
+    height: "40%",
+    marginLeft: "2rem",
+  };
+
   return (
     <div className="hamburger">
       <div className="nav-start">
-        <img style={style} src={logo}></img>
+        <img src={logo}></img>
       </div>
       <div className="nav-end">
         {menu ? (
@@ -124,69 +92,69 @@ const Hamburger = () => {
             >
               {features ? (
                 <div>
-                  <li onClick={handleFeaturesClick}>
+                  <li
+                    style={{
+                      height: "3rem",
+                      fontSize: "1.6rem",
+                      paddingBottom: "3rem",
+                    }}
+                    onClick={handleFeaturesClick}
+                  >
                     Features
-                    <img style={style2} src={arrowUp}></img>
+                    <img style={{ marginLeft: "0.6rem" }} src={arrowUp}></img>
                   </li>
-                  <div style={styleFeature} className="featureList">
-                    <div style={styleFeatureList} className="feature-item">
-                      <img style={styleIcon} src={todo} alt="todo"></img>
-                      <p style={styleList}>To do list</p>
+
+                  <div style={featureListStyle} className="featureList">
+                    <div className="feature-item">
+                      <img style={imgStyle} src={todo} alt="todo"></img>
+                      <p style={listStyle}>To do list</p>
                     </div>
-                    <div style={styleFeatureList} className="feature-item">
-                      <img
-                        style={styleIcon}
-                        src={calendar}
-                        alt="calendar"
-                      ></img>
-                      <p style={styleList}>Calendar</p>
+                    <div className="feature-item">
+                      <img style={imgStyle} src={calendar} alt="calendar"></img>
+                      <p style={listStyle}>Calendar</p>
                     </div>
-                    <div style={styleFeatureList} className="feature-item">
+                    <div className="feature-item">
                       <img
-                        style={styleIcon}
+                        style={imgStyle}
                         src={reminders}
                         alt="reminders"
                       ></img>
-                      <p style={styleList}>Reminders</p>
+                      <p style={listStyle}>Reminders</p>
                     </div>
-                    <div style={styleFeatureList} className="feature-item">
-                      <img
-                        style={styleIcon}
-                        src={planning}
-                        alt="planning"
-                      ></img>
-                      <p style={styleList}>Planning</p>
+                    <div className="feature-item">
+                      <img style={imgStyle} src={planning} alt="planning"></img>
+                      <p style={listStyle}>Planning</p>
                     </div>
                   </div>
                 </div>
               ) : (
                 <li onClick={handleFeaturesClick}>
                   Features
-                  <img style={style2} src={arrowDown}></img>
+                  <img style={{ marginLeft: "0.6rem" }} src={arrowDown}></img>
                 </li>
               )}
               {company ? (
                 <div>
                   <li onClick={handleCompany}>
                     Company
-                    <img style={style2} src={arrowUp}></img>
+                    <img style={{ marginLeft: "0.6rem" }} src={arrowUp}></img>
                   </li>
-                  <div style={styleFeature1} className="featureList">
-                    <div style={styleFeatureList} className="feature-item">
-                      <p style={styleList}>History</p>
+                  <div className="featureList">
+                    <div className="feature-item">
+                      <p>History</p>
                     </div>
-                    <div style={styleFeatureList} className="feature-item">
-                      <p style={styleList}>Our team</p>
+                    <div className="feature-item">
+                      <p>Our team</p>
                     </div>
-                    <div style={styleFeatureList} className="feature-item">
-                      <p style={styleList}>Blog</p>
+                    <div className="feature-item">
+                      <p>Blog</p>
                     </div>
                   </div>
                 </div>
               ) : (
                 <li onClick={handleCompany}>
                   Company
-                  <img style={style2} src={arrowDown}></img>
+                  <img style={{ marginLeft: "0.6rem" }} src={arrowDown}></img>
                 </li>
               )}
               <li>Careers</li>

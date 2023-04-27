@@ -177,6 +177,11 @@ main > .right {
   background-color: #fff;
 }
 
+.feature-item {
+  display: flex;
+  margin-bottom: 2rem;
+}
+
 .ham-menu > ul > li {
   font-size: 1.6rem;
   padding: 2rem;
