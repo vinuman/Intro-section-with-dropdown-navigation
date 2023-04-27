@@ -17,7 +17,7 @@ const Nav = () => {
     console.log(features);
   };
 
-  const handleHamburger = () => {
+  const handleCompany = () => {
     setCompany(!company);
   };
 
@@ -120,7 +120,7 @@ const Nav = () => {
           )}
           {company ? (
             <div>
-              <li onClick={handleHamburger}>
+              <li onClick={handleCompany}>
                 Company
                 <img style={style2} src={arrowUp}></img>
               </li>
@@ -137,7 +137,7 @@ const Nav = () => {
               </div>
             </div>
           ) : (
-            <li onClick={handleHamburger}>
+            <li onClick={handleCompany}>
               Company
               <img style={style2} src={arrowDown}></img>
             </li>
