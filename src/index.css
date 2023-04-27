@@ -21,7 +21,7 @@ body {
 }
 
 .bg-black {
-  background-color: var(--almost-black);
+  background-color: var(--medium-gray);
 }
 
 nav {
