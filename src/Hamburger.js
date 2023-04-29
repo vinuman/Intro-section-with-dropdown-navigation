@@ -38,8 +38,9 @@ const Hamburger = () => {
   const featureListStyle = {
     width: "150%",
     marginTop: "2rem",
-
+    zIndex: "1000",
     marginLeft: "3rem",
+    backgroundColor: "fff",
   };
 
   const imgStyle = {
@@ -85,9 +86,8 @@ const Hamburger = () => {
             <ul
               style={{
                 listStyle: "none",
-                position: "absolute",
-                top: "10%",
-                left: "5%",
+                marginTop: "20%",
+                marginLeft: "5%",
               }}
             >
               {features ? (
@@ -135,7 +135,14 @@ const Hamburger = () => {
               )}
               {company ? (
                 <div>
-                  <li onClick={handleCompany}>
+                  <li
+                    style={{
+                      height: "3rem",
+                      fontSize: "1.6rem",
+                      paddingBottom: "3rem",
+                    }}
+                    onClick={handleCompany}
+                  >
                     Company
                     <img style={{ marginLeft: "0.6rem" }} src={arrowUp}></img>
                   </li>
@@ -164,7 +171,6 @@ const Hamburger = () => {
               style={{
                 display: "flex",
                 flexDirection: "column",
-                marginTop: "100%",
               }}
               className="right"
             >
